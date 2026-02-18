@@ -1,0 +1,17 @@
+<div id="container" style="width:100%; height:600px;"></div>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        
+        // This pulls the raw file from the GitHub repository
+        player.load("https://raw.githubusercontent.com/ChenTheIdiot/epiphanymurdergshost/main/murder.swf");
+        
+        player.style.width = "100%";
+        player.style.height = "100%";
+    });
+</script>
